@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="display-4 text-center mb-4">Update Task</h1>
+    <form method="post" class="shadow p-4 bg-white rounded">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary btn-lg">Save</button>
+            <a href="/" class="btn btn-secondary btn-lg">Cancel</a>
+        </div>
+    </form>
+</div>
+
+<style>
+    body {
+        background: linear-gradient(to right, #dfeafe, #b1c0d6);
+        font-family: 'Helvetica Neue', sans-serif;    }
+    .container {
+        max-width: 600px;
+    }
+    form {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    form:hover {
+        transform: scale(1.02);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    .btn-primary {
+        background-color: #4CAF50;
+        border-color: #4CAF50;
+    }
+    .btn-primary:hover {
+        background-color: #45a049;
+        border-color: #45a049;
+    }
+    .btn-secondary {
+        background-color: #555555;
+        border-color: #555555;
+    }
+    .btn-secondary:hover {
+        background-color: #444444;
+        border-color: #444444;
+    }
+</style>
+{% endblock %}
