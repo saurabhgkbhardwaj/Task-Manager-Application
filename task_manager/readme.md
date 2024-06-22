@@ -25,7 +25,7 @@ The Task Manager Application is a web-based platform designed to help users mana
 
     ```bash
     git clone https://github.com/saurabhgkbhardwaj/Task-Manager-Application.git
-    cd task_manager
+    cd Task-Manager-Application
     ```
 
 2. Create a virtual environment and activate it:
